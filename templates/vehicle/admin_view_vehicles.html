@@ -1,0 +1,11 @@
+{% extends 'vehicle/base.html' %}
+{% block content %}
+  <h2>Vehicles</h2>
+  <ul>
+    {% for vehicle in vehicles %}
+      <li>{{ vehicle.registration_number }} - {{ vehicle.make_model }}</li>
+    {% empty %}
+      <li>No vehicles.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

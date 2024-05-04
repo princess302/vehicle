@@ -1,0 +1,11 @@
+{% extends 'vehicle/base.html' %}
+{% block content %}
+  <h2>Routes</h2>
+  <ul>
+    {% for route in routes %}
+      <li>{{ route.route_id }}: {{ route.origin }} to {{ route.destination }}</li>
+    {% empty %}
+      <li>No routes.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

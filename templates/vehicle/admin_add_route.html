@@ -1,0 +1,9 @@
+{% extends 'vehicle/base.html' %}
+{% block content %}
+  <h2>Add Route</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ route_form.as_p }}
+    <button type="submit">Add Route</button>
+  </form>
+{% endblock %}
